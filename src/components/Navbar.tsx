@@ -27,9 +27,9 @@ const Navbar = () => {
     <nav className='w-full p-4 fixed z-[50] '>
         <div className='mx-auto max-w-[1180px]'>
             <div className="flex flex-col md:flex-row  lg:flex-row items-center justify-between gap-x-4">
-                <a href="/" className="text-xl font-bold  md:mb-0 text-white">
+                <Link href="/" className="text-xl font-bold  md:mb-0 text-white">
                     Ai FeedBack
-                </a>
+                </Link>
                 {
                     session?(
                         <>

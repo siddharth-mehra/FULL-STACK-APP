@@ -35,7 +35,7 @@ const initialMessageString =
   "What's your favorite movie?||Do you have any pets?||What's your dream job?";
 const Senderpage = () => {
   const [loading, setLoading] = useState(false);
-  const [suggestedMessages, setSuggestedMessages] = useState<string[]>([]);
+  const [suggestedMessages, setSuggestedMessages] = useState<string[]>(parseStringMessages(initialMessageString));
   const params = useParams<{ username: string }>();
   const name = decodeURIComponent(params.username);
   const { toast } = useToast();

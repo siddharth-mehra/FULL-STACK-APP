@@ -21,6 +21,7 @@ export async function POST(request: Request) {
         await user.save();
         return Response.json({success:true, message:"Message sent successfully"},{status:200});
     }catch(error){
+        console.log(error);
         return Response.json({success:false, message:"Error sending message"},
             {status:401});   
     }
