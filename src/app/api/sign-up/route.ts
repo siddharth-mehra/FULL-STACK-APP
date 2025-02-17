@@ -61,8 +61,9 @@ export async function POST(request: Request) {
 
       await newUser.save();
     }
-
+    
     // Send verification email
+
     const emailResponse = await sendVerificationEmail(
       email,
       name,
@@ -77,7 +78,7 @@ export async function POST(request: Request) {
         { status: 500 }
       );
     }
-
+    
     return Response.json(
       {
         success: true,
