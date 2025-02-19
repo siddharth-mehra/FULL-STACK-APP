@@ -8,11 +8,11 @@ export async function sendVerificationEmail(
 ): Promise<ApiResponse> {
   try {
     const transporter = nodemailer.createTransport({
-      service: process.env.MAIL_USER,
+      service: 'gmail',
       port: 465,
       secure: true,
       auth: {
-        user: process.env.MAIL_HOST,
+        user: process.env.MAIL_USER,
         pass: process.env.MAIL_PASS,
       },
     });
@@ -47,7 +47,7 @@ export async function sendVerificationEmail(
 
     // Email content
     const mailOptions = {
-      from: process.env.EMAIL_USER || undefined, // Sender email
+      from: process.env.MAIL_USER || undefined, // Sender email
       to: email, // Recipient email
       subject: 'My Verification | Verify Email', // Subject of the email
       html: emailBody, // Directly generated HTML content
