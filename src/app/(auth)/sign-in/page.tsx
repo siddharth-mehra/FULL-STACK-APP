@@ -25,7 +25,7 @@ const handleGoogleSignIn = async () => {
   try {
     
     await signIn('google', { 
-      callbackUrl:`${window.location.origin}/dashboard` // Specify a clear redirect destination
+      callbackUrl:`https://full-stack-app-sigma.vercel.app/dashboard` // Specify a clear redirect destination
     });
   } catch (error) {
     console.error('Google sign-in error:', error);
