@@ -25,7 +25,7 @@ const handleGoogleSignIn = async () => {
   try {
     
     await signIn('google', { 
-      callbackUrl:`http://localhost:3000/dashboard` // Specify a clear redirect destination
+      callbackUrl:`{window.location.origin}/dashboard` // Specify a clear redirect destination
     });
   } catch (error) {
     console.error('Google sign-in error:', error);
