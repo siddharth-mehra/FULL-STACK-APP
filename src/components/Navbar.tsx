@@ -28,7 +28,7 @@ const Navbar = () => {
         <div className='mx-auto max-w-[1180px]'>
             <div className="flex flex-col md:flex-row  lg:flex-row items-center justify-between gap-x-4">
                 <Link href="/" className="text-xl font-bold  md:mb-0 text-white">
-                    Ai FeedBack
+                    Ai Creations
                 </Link>
                 {
                     session?(
